@@ -2,6 +2,7 @@ spring:
   threads:
     virtual:
       enabled: true
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -9,19 +10,24 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
   datasource:
     username: muzammil
     password: password
     driver-class-name: org.postgresql.Driver
+
   data:
     redis:
       host: localhost
       port: 6379
+
   kafka:
     bootstrap-servers: localhost:29092
+
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
     consumer:
       group-id: razorpay-clone-group
       auto-offset-reset: earliest
@@ -29,13 +35,17 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.trusted.packages: "com.muzammil.razorpay.*"
-  eureka:
+
+eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
     hostname: localhost
+
+jwt:
+  secret-key: dont-use-in-prod-a9asd7fulasjdfaklsdfu98q3uhjdiosh897as9d8f7ua9osufdjilasdjf
 
 management:
   endpoints:
