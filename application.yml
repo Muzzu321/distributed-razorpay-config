@@ -12,6 +12,8 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
   datasource:
+    hikari:
+      maximum-pool-size: 50
     username: muzammil
     password: password
     driver-class-name: org.postgresql.Driver
