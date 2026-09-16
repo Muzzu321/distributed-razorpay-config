@@ -90,7 +90,8 @@ Load tested using Apache JMeter.
 - **Grafana** — CPU and JVM memory dashboards
 - **Zipkin** — distributed request tracing
 
-<img width="900" height="561" alt="Grafana Dashboard" src="YOUR_GRAFANA_IMAGE_URL" />
+<img width="900" height="561" alt="Grafana Dashboard" src="https://github.com/user-attachments/assets/bc9850ff-1e6b-4925-aaa7-8e3f4624a35d" />
+
 
 ## Kubernetes
 
