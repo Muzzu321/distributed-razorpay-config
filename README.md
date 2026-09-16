@@ -81,7 +81,8 @@ Load tested using Apache JMeter.
 - P99: 2,257.99 ms
 - Throughput: 177.85 TPS
 
-<img width="900" alt="JMeter Load Test Results" src="YOUR_JMETER_RESULTS_IMAGE_URL" />
+<img width="900" height="451" alt="JMeter Load Test Results" src="https://github.com/user-attachments/assets/8e1f5d6c-65ca-40d5-8dba-5cb35acba7bf" />
+
 
 ## Observability
 
@@ -89,7 +90,7 @@ Load tested using Apache JMeter.
 - **Grafana** — CPU and JVM memory dashboards
 - **Zipkin** — distributed request tracing
 
-<img width="900" alt="Grafana Dashboard" src="YOUR_GRAFANA_IMAGE_URL" />
+<img width="900" height="561" alt="Grafana Dashboard" src="YOUR_GRAFANA_IMAGE_URL" />
 
 ## Kubernetes
 
