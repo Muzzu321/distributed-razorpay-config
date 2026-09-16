@@ -1,6 +1,6 @@
 # Distributed Payment Gateway
 
-A Kubernetes-native distributed payment gateway inspired by Razorpay/Stripe, supporting order creation, payment authorization, bank callback simulation, settlement, and webhook delivery.
+A Kubernetes-based distributed payment gateway inspired by Razorpay/Stripe, supporting order creation, payment authorization, bank callback simulation, settlement, and webhook delivery.
 
 ## Features
 
@@ -43,14 +43,12 @@ Infrastructure:
 
 ## Design Patterns
 
-- **Idempotency** — prevents duplicate orders/payments during retries
+- **Idempotency** — prevents duplicate orders and payments during retries
 - **Transactional Outbox** — reliable database-to-Kafka event publishing
 - **SAGA** — handles distributed payment workflows
 - **Circuit Breaker** — prevents cascading failures
 - **Distributed Locking** — prevents duplicate scheduled-job execution
 - **Stateless Services** — enables horizontal scaling
-
-These patterns are used specifically to address retries, partial failures, concurrent processing, and horizontal scaling. :contentReference[oaicite:1]{index=1}
 
 ## Load Testing
 
@@ -65,7 +63,7 @@ Load tested using Apache JMeter.
 | P90 Latency | 983 ms |
 | P95 Latency | 1,499.95 ms |
 | P99 Latency | 2,210.99 ms |
-| Aggregate Throughput | 308.58 transactions/sec |
+| Throughput | 308.58 transactions/sec |
 
 ### Create Order
 
@@ -95,12 +93,8 @@ Load tested using Apache JMeter.
 
 ## Kubernetes
 
-Deployed using Kubernetes Deployments, StatefulSets, Services, ConfigMaps, and Secrets, with the architecture designed for horizontal scaling. :contentReference[oaicite:2]{index=2}
+Deployed using Kubernetes Deployments, StatefulSets, Services, ConfigMaps, and Secrets, with support for horizontal scaling.
 
 ## Tech Stack
 
 **Java | Spring Boot | Spring Cloud | PostgreSQL | Redis | Kafka | Kubernetes | Docker | Resilience4J | Prometheus | Grafana | Zipkin | JMeter**
-
-
-
-
